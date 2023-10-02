@@ -1,0 +1,40 @@
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .search-input-container {
+    background-color: var(--light-gray);
+    padding: 0.4rem 0.7rem;
+    color: var(--gray);
+    border-radius: 3rem;
+    width: 40%;
+
+    input[type="search"] {
+      width: 93%;
+      margin-left: 1rem;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .create-company-button {
+    padding: 0.4rem 1.2rem;
+    color: white;
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 0.3rem;
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pagination-container {
+  margin-top: 4rem;
+}

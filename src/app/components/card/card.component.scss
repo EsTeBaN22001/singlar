@@ -1,0 +1,66 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border: none;
+  -webkit-box-shadow: 0px 0px 7px -4px rgba(161, 158, 161, 1);
+  -moz-box-shadow: 0px 0px 7px -4px rgba(161, 158, 161, 1);
+  box-shadow: 0px 0px 7px -4px rgba(161, 158, 161, 1);
+
+  .company-img {
+    font-size: 4rem;
+  }
+
+  .company-name {
+    color: var(--blue);
+    font-weight: 500;
+  }
+
+  .company-info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .users-number {
+        color: var(--dark-blue);
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .sync-state {
+        color: white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &.demo {
+          background-color: var(--light-blue);
+        }
+
+        &.active {
+          background-color: var(--green);
+        }
+      }
+    }
+  }
+
+  .details-button {
+    padding: 0.5rem 1.5rem;
+    background-color: #3b3f5c;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    outline: none;
+    font-weight: 500;
+  }
+}

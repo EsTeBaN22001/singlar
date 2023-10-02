@@ -1,0 +1,23 @@
+<div class="search-container">
+  <div class="search-input-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" placeholder="Buscar compañias" />
+  </div>
+  <button class="create-company-button">
+    <i class="fa-solid fa-circle-plus"></i>
+    Crear compañía
+  </button>
+</div>
+
+<div class="cards-container">
+  <app-card *ngFor="let item of [].constructor(8)"> </app-card>
+</div>
+
+<div class="pagination-container">
+  <ngb-pagination
+    [collectionSize]="70"
+    [(page)]="page"
+    aria-label="Default pagination"
+    class="d-flex justify-content-center"
+  ></ngb-pagination>
+</div>
