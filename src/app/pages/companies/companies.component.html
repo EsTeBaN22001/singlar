@@ -10,7 +10,7 @@
 </div>
 
 <div class="cards-container">
-  <app-card *ngFor="let item of [].constructor(8)"> </app-card>
+  <app-card *ngFor="let company of companies" [company]="company"> </app-card>
 </div>
 
 <div class="pagination-container">

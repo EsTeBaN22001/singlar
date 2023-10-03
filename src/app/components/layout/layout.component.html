@@ -9,82 +9,18 @@
         <p>Portada</p>
       </a>
       <div ngbAccordion>
-        <div ngbAccordionItem>
+        <div ngbAccordionItem *ngFor="let item of menuItems">
           <h2 ngbAccordionHeader>
             <button ngbAccordionButton>
-              <i class="fa-solid fa-cloud button-icon"></i>
-              <p class="text">Microsoft Purview</p>
+              <i [class]="'fa-solid ' + item.icon + ' button-icon'"></i>
+              <p class="text">{{ item.text }}</p>
             </button>
           </h2>
           <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-              <a class="sub-item-link" routerLink="/">
-                <i class="fa-solid fa-globe"></i>
-                <p>Compañías</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div ngbAccordionItem>
-          <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>
-              <i class="fa-solid fa-file-lines button-icon"></i>
-              <p class="text">Informes</p>
-            </button>
-          </h2>
-          <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-              <a class="sub-item-link" routerLink="/">
-                <i class="fa-solid fa-globe"></i>
-                <p>Compañías</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div ngbAccordionItem>
-          <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>
-              <i class="fa-solid fa-sliders button-icon"></i>
-              <p class="text">Utilidades</p>
-            </button>
-          </h2>
-          <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-              <a class="sub-item-link" routerLink="/">
-                <i class="fa-solid fa-globe"></i>
-                <p>Compañías</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div ngbAccordionItem>
-          <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>
-              <i class="fa-solid fa-screwdriver-wrench button-icon"></i>
-              <p class="text">Administración</p>
-            </button>
-          </h2>
-          <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-              <a class="sub-item-link" routerLink="/">
-                <i class="fa-solid fa-globe"></i>
-                <p>Compañías</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div ngbAccordionItem>
-          <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>
-              <i class="fa-regular fa-file-lines button-icon"></i>
-              <p class="text">Manuales</p>
-            </button>
-          </h2>
-          <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-              <a class="sub-item-link" routerLink="/">
-                <i class="fa-solid fa-globe"></i>
-                <p>Compañías</p>
+            <div ngbAccordionBody *ngFor="let subItem of item.subItems">
+              <a class="sub-item-link" [routerLink]="subItem.routerLink">
+                <i [class]="'fa-solid ' + subItem.icon"></i>
+                <p>{{ subItem.text }}</p>
               </a>
             </div>
           </div>

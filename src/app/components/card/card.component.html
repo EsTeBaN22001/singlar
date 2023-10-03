@@ -2,16 +2,25 @@
   <div class="company-img">
     <i class="fa-solid fa-city"></i>
   </div>
-  <h2 class="company-name">Singlar Innovación</h2>
+  <h2 class="company-name">{{ company.name }}</h2>
   <div class="company-info">
     <div class="card-info">
       <p class="users-tag">Usuarios</p>
-      <p class="users-number">25</p>
+      <p class="users-number">{{ company.usersCount }}</p>
     </div>
     <div class="card-info">
       <p class="sync-tag">Sincronización</p>
-      <p class="sync-state demo">Demo</p>
+      <!-- <p class="sync-state demo">Demo</p> -->
+      <p
+        [ngClass]="{
+          'sync-state': true,
+          demo: company.sync == 1,
+          active: company.sync == 2
+        }"
+      >
+        {{ company.sync == 1 ? "Demo" : "Activo" }}
+      </p>
     </div>
   </div>
-  <button class="details-button">Detalles</button>
+  <a [href]="company.webUrl" target="_blank" class="details-button">Detalles</a>
 </div>
