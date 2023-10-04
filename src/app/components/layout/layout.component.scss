@@ -6,11 +6,20 @@
     z-index: 1;
     width: 20rem;
     max-width: 30vw;
-    // padding: 2rem;
     overflow-y: auto;
     -webkit-box-shadow: 0px 0px 28px -7px rgba(57, 57, 57, 0.75);
     -moz-box-shadow: 0px 0px 28px -7px rgba(57, 57, 57, 0.75);
     box-shadow: 0px 0px 28px -7px rgba(57, 57, 57, 0.75);
+    transition: all 0.3s ease;
+    overflow: visible;
+    opacity: 1;
+
+    &.hidden {
+      width: 0;
+      opacity: 0;
+      flex-grow: 0;
+      overflow: hidden;
+    }
 
     .logo {
       width: 100%;

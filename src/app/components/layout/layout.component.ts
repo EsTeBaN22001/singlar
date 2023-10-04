@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
+  hiddenMenu: boolean = false;
+
   menuItems = [
     {
       icon: 'fa-cloud',
@@ -33,4 +35,9 @@ export class LayoutComponent {
       subItems: [{ icon: 'fa-globe', text: 'Compañías', routerLink: '/' }],
     },
   ];
+
+  toggleMenu() {
+    this.hiddenMenu = !this.hiddenMenu;
+    console.log(`Estado del menú: ${this.hiddenMenu}`);
+  }
 }
