@@ -1,24 +1,26 @@
-<div class="search-container">
-  <div class="search-input-container">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" placeholder="Buscar compañias" />
+<div class="white-card-container margin-top-negative">
+  <div class="search-container">
+    <div class="search-input-container">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" placeholder="Buscar compañias" />
+    </div>
+    <button class="button">
+      <i class="fa-solid fa-circle-plus"></i>
+      Crear compañía
+    </button>
   </div>
-  <button class="create-company-button">
-    <i class="fa-solid fa-circle-plus"></i>
-    Crear compañía
-  </button>
-</div>
-
-<div class="cards-container">
-  <app-card *ngFor="let company of companies" [company]="company"> </app-card>
-</div>
-
-<div class="pagination-container">
-  <ngb-pagination
-    [collectionSize]="70"
-    [size]="'sm'"
-    [(page)]="page"
-    aria-label="Default pagination"
-    class="d-flex justify-content-center"
-  ></ngb-pagination>
+  
+  <div class="cards-container">
+    <app-card *ngFor="let company of companies" [company]="company"> </app-card>
+  </div>
+  
+  <div class="pagination-container">
+    <ngb-pagination
+      [collectionSize]="70"
+      [size]="'sm'"
+      [(page)]="page"
+      aria-label="Default pagination"
+      class="d-flex justify-content-center"
+    ></ngb-pagination>
+  </div>  
 </div>

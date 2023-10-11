@@ -1,0 +1,82 @@
+<div class="white-card-container margin-top-negative">
+  <a routerLink="/companies" class="button"><i class="fa-solid fa-arrow-left"></i> Atrás</a>
+  <div class="company-info-container">
+    <div class="company-img">
+      <i class="fa-solid fa-city"></i>
+    </div>
+    <div class="company-info">
+      <h3 class="company-title">{{company?.name}}</h3>
+      <a class="company-url" [routerLink]="company?.webUrl">{{company?.webUrl}}</a>
+      <p class="company-description">{{company?.description}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="white-card-container">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <button ngbNavLink>Información</button>
+      <ng-template ngbNavContent>
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-content">
+              <i class="fa-solid fa-earth-americas"></i>
+              <a [href]="company?.webUrl">{{ company?.webUrl }}</a>
+            </div>
+            <div class="card-content">
+              <i class="fa-solid fa-envelope"></i>
+              <p>{{ company?.email }}</p>
+            </div>
+            <div class="card-content">
+              <i class="fa-solid fa-phone"></i>
+              <p>{{ company?.phone }}</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Descripción</h3>
+              <p>{{ company?.description }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <button ngbNavLink>Usuarios</button>
+      <ng-template ngbNavContent>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">NOMBRE</th>
+              <th scope="col">CORREO ELECTRONICO</th>
+              <th scope="col">DEPARTAMENTO</th>
+              <th scope="col">TELEFONO</th>
+              <th scope="col">OPC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>
+                {{ user.name }}
+              </td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.area }}</td>
+              <td>{{ user.phone }}</td>
+              <td>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-trash-can icon-red"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="d-flex justify-content-center p-2">
+          <ngb-pagination [collectionSize]="collectionSize" [(page)]="page">
+          </ngb-pagination>
+        </div>
+        
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>

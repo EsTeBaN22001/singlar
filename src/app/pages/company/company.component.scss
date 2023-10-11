@@ -1,0 +1,112 @@
+.company{
+  &-info-container{
+    display: flex;
+    margin-top: 1rem;
+    column-gap: 2rem;
+  }
+
+  &-img{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  &-title{
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--text-color-dark);
+    margin: 0;
+  }
+
+  &-url{
+    font-size: .7rem;
+  }
+
+  &-description{
+    font-size: .8rem;
+    font-weight: 500;
+  }
+}
+
+ul {
+  &.nav-tabs {
+    border-bottom: 1px solid var(--grey);
+    font-size: .7rem;
+  }
+
+  li {
+    .nav-link {
+      position: relative;
+      border: none;
+      color: var(--grey);
+      border-bottom: .1rem solid transparent;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--light-grey);
+      }
+
+      &.active {
+        color: var(--blue);
+        border-bottom: .1rem solid var(--blue);
+      }
+    }
+  }
+}
+
+.cards-container{
+  display: flex; 
+  gap: 2rem;
+
+  .card{
+    padding: 1rem;
+    border: none;
+
+    &-content{
+      svg {
+        color: var(--blue);
+        margin-right: 0.5rem;
+      }
+
+      a,
+      p {
+        display: inline;
+        text-decoration: none;
+        color: var(--dark-grey);
+        font-size: 0.9rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        color: var(--dark-grey);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.table {
+  * {
+    color: var(--dark-grey);
+    font-size: .8rem;
+  }
+
+  th {
+    color: var(--blue);
+  }
+
+  .icon-red {
+    color: var(--red);
+  }
+}
+
+ngb-pagination {
+  .pagination {
+    .page-item {
+      border-radius: 50%;
+      .page-link {
+        border-radius: 50%;
+      }
+    }
+  }
+}

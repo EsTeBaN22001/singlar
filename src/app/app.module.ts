@@ -8,6 +8,7 @@ import { CardComponent } from './components/card/card.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { CompaniesComponent } from './pages/companies/companies.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CompanyComponent } from './pages/company/company.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     CardComponent,
     LayoutComponent,
     CompaniesComponent,
+    CompanyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],

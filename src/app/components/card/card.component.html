@@ -22,5 +22,5 @@
       </p>
     </div>
   </div>
-  <a [href]="company.webUrl" target="_blank" class="details-button">Detalles</a>
+  <a [routerLink]="['/companies', company.id]" class="details-button">Detalles</a>
 </div>
